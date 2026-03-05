@@ -52,12 +52,18 @@ Data preprocessing steps include:
 ### 3. Exploratory Data Analysis (EDA)
 Several visualizations are created to understand customer behavior:
 
-- Churn distribution
-- Churn by geography
-- Churn by gender
-- Balance vs churn
-- Tenure vs churn
-- Correlation heatmap
+
+### Churn Distribution
+![Churn Distribution](outputs/bar_1.png)
+
+### Churn by Geography
+![Churn by Geography](outputs/bar_2.png)
+
+
+### Correlation Heatmap
+![Correlation Heatmap](outputs/heatmap.png)
+
+
 
 These analyses help identify important factors influencing customer churn.
 
