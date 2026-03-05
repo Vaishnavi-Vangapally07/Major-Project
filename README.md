@@ -33,7 +33,7 @@ Exited / Churn
 
 Dataset Size:
 - ~50,000 rows
-- ~20 features
+- ~14 features
 
 ---
 
