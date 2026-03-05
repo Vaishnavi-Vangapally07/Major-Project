@@ -59,6 +59,27 @@ Several visualizations are created to understand customer behavior:
 ### Churn by Geography
 ![Churn by Geography](outputs/bar_2.png)
 
+## Boxplot Analysis
+
+### Distribution of Features by Churn
+
+<p align="center">
+  <img src="outputs/box_balance.png" width="45%">
+  <img src="outputs/box_salary.png" width="45%">
+</p>
+
+<p align="center">
+  <img src="outputs/box_age.png" width="45%">
+  <img src="outputs/box_tenure.png" width="45%">
+</p>
+
+**Insights:**
+
+- Customers with **higher balances** show a higher probability of churn.
+- **Age** distribution indicates that middle-aged customers churn more frequently.
+- **Estimated salary** does not show a strong separation between churn and non-churn customers.
+- Customers with **lower tenure** are more likely to leave the bank.
+
 
 ### Correlation Heatmap
 ![Correlation Heatmap](outputs/heatmap.png)
@@ -89,10 +110,20 @@ The following models are trained and evaluated:
 2. K-Nearest Neighbors (KNN)  
 3. Random Forest  
 4. Support Vector Machine (SVM)
+5. XGBoost
 
 Each model is trained on the processed dataset and evaluated using performance metrics.
 
----
+## Logistic Regression Results
+
+### 1️⃣ Coefficients
+![Logistic Regression Coefficients](outputs/log reg coefficients.png)
+
+### 2️⃣ Confusion Matrix
+![Confusion Matrix](outputs/confusion matrix.png)
+
+### 3️⃣ ROC Curve
+![ROC Curve](outputs/roc curve.png)
 
 ## Model Evaluation Metrics
 
