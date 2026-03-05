@@ -1,4 +1,4 @@
-# Bank Customer Churn Prediction using Machine Learning
+# Customer Churn Prediction in Banking using Machine Learning
 
 ## Project Overview
 Customer churn is a major challenge in the banking industry. When customers leave a bank, it results in revenue loss and increased marketing costs to acquire new customers.
@@ -10,9 +10,7 @@ The goal is to help banks take preventive actions to retain valuable customers.
 ---
 
 ## Dataset
-The dataset used in this project is **bank_churn_data.csv**.
-
-It contains information about bank customers such as:
+The dataset used in this project is **bank_churn_data.csv**, containing information about bank customers:
 
 - Credit Score
 - Geography
@@ -28,40 +26,36 @@ It contains information about bank customers such as:
 ### Target Variable
 Exited / Churn
 
-- 0 → Customer stays with the bank
+- 0 → Customer stays with the bank  
 - 1 → Customer leaves the bank
 
-Dataset Size:
-- ~50,000 rows
-- ~14 features
+Dataset Size: ~50,000 rows, ~14 features
 
 ---
 
 ## Project Workflow
 
-### 1. Data Loading
+### 1️⃣ Data Loading
 The dataset is loaded using Pandas and basic inspection is performed.
 
-### 2. Data Preprocessing
-Data preprocessing steps include:
-- Cleaning column names
-- Handling missing values
-- Converting data types
+### 2️⃣ Data Preprocessing
+Steps include:
+- Cleaning column names  
+- Handling missing values  
+- Converting data types  
 - Separating categorical and numerical features
 
-### 3. Exploratory Data Analysis (EDA)
-Several visualizations are created to understand customer behavior:
+### 3️⃣ Exploratory Data Analysis (EDA)
 
-
-### Churn Distribution
+#### Churn Distribution
 ![Churn Distribution](outputs/bar_1.png)
 
-### Churn by Geography
+#### Churn by Geography
 ![Churn by Geography](outputs/bar_2.png)
 
-## Boxplot Analysis
+### Boxplot Analysis
 
-### Distribution of Features by Churn
+#### Distribution of Features by Churn
 
 <p align="center">
   <img src="outputs/box_balance.png" width="45%">
@@ -74,31 +68,27 @@ Several visualizations are created to understand customer behavior:
 </p>
 
 **Insights:**
+- Customers with **higher balances** show higher probability of churn.  
+- **Middle-aged customers** churn more frequently.  
+- **Estimated salary** does not show strong separation.  
+- Customers with **lower tenure** are more likely to leave.
 
-- Customers with **higher balances** show a higher probability of churn.
-- **Age** distribution indicates that middle-aged customers churn more frequently.
-- **Estimated salary** does not show a strong separation between churn and non-churn customers.
-- Customers with **lower tenure** are more likely to leave the bank.
-
-
-### Correlation Heatmap
+#### Correlation Heatmap
 ![Correlation Heatmap](outputs/heatmap.png)
 
+---
 
+### 4️⃣ Feature Engineering
+Unnecessary columns such as customer IDs are removed. The dataset is divided into:
 
-These analyses help identify important factors influencing customer churn.
+- **X** → Input features  
+- **y** → Target variable
 
-### 4. Feature Engineering
-Unnecessary columns such as customer IDs are removed and the dataset is divided into:
+### 5️⃣ Data Scaling
+StandardScaler is applied to normalize numerical features.
 
-X → Input features  
-y → Target variable
-
-### 5. Data Scaling
-StandardScaler is used to normalize numerical features before training machine learning models.
-
-### 6. Handling Class Imbalance
-Customer churn datasets are usually imbalanced. To address this issue, **SMOTE (Synthetic Minority Oversampling Technique)** is applied to balance the dataset.
+### 6️⃣ Handling Class Imbalance
+SMOTE (Synthetic Minority Oversampling Technique) is used to balance the dataset.
 
 ---
 
@@ -109,30 +99,32 @@ The following models are trained and evaluated:
 1. Logistic Regression  
 2. K-Nearest Neighbors (KNN)  
 3. Random Forest  
-4. Support Vector Machine (SVM)
+4. Support Vector Machine (SVM)  
 5. XGBoost
 
-Each model is trained on the processed dataset and evaluated using performance metrics.
+---
 
 ## Logistic Regression Results
 
 ### 1️⃣ Coefficients
-![Logistic Regression Coefficients](outputs/log reg coefficients.png)
+![Logistic Regression Coefficients](outputs/log_reg_coefficients.png)
 
-### 2️⃣ Confusion Matrix
-![Confusion Matrix](outputs/confusion matrix.png)
+### 2️⃣ Confusion Matrix & ROC Curve
+<p align="center">
+  <img src="outputs/confusion_matrix.png" width="45%">
+  <img src="outputs/roc_curve.png" width="45%">
+</p>
 
-### 3️⃣ ROC Curve
-![ROC Curve](outputs/roc curve.png)
+---
 
 ## Model Evaluation Metrics
 
 The models are evaluated using:
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
+- Accuracy  
+- Precision  
+- Recall  
+- F1 Score  
 - ROC-AUC Score
 
 These metrics help measure how well the model identifies churn customers.
@@ -141,56 +133,35 @@ These metrics help measure how well the model identifies churn customers.
 
 ## Technologies Used
 
-Programming Language:
-Python
-
-Libraries:
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-learn
-- Imbalanced-learn (SMOTE)
-
-Development Environment:
-Jupyter Notebook
+- **Programming Language:** Python  
+- **Libraries:** NumPy, Pandas, Matplotlib, Scikit-learn, Imbalanced-learn (SMOTE)  
+- **Development Environment:** Jupyter Notebook
 
 ---
 
-## Project Structure
-
-Bank-Churn-Prediction  
-│  
-├── bank_churn.ipynb  
-├── bank_churn_data.csv  
-└── README.md  
-
----
 
 ## Applications
 
 This project can help banks to:
 
-- Identify customers who are likely to leave
-- Improve customer retention strategies
-- Reduce churn rates
-- Perform targeted marketing campaigns
+- Identify customers likely to leave  
+- Improve customer retention strategies  
+- Reduce churn rates  
+- Perform targeted marketing campaigns  
 - Improve overall business decision making
 
 ---
 
 ## Future Improvements
 
-Possible improvements include:
-
-- Hyperparameter tuning
-- Feature importance analysis
-- Model explainability using SHAP
-- Deploying the model using Flask or Streamlit
-- Building a real-time churn prediction dashboard
+- Hyperparameter tuning  
+- Feature importance analysis  
+- Deploying the model using Flask or Streamlit  
+- Building a real-time churn prediction dashboard  
 
 ---
 
 ## Author
 
-Vaishnavi Vangapally  
+**Vaishnavi Vangapally**  
 Aspiring Data Scientist interested in Machine Learning, Data Analysis, and AI-based solutions.
