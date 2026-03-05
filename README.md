@@ -127,6 +127,16 @@ The models are evaluated using:
 - F1 Score  
 - ROC-AUC Score
 
+| Model                | Accuracy | Precision  | Recall    | F1 Score  | ROC_AUC  |
+|---------------------|---------|-----------|----------|----------|----------|
+| Logistic Regression | 0.6966  | 0.372212  | 0.712813 | 0.489054 | 0.775080 |
+| KNN                 | 0.9248  | 0.744762  | 0.959745 | 0.838696 | 0.989165 |
+| Random Forest       | 0.9921  | 0.983696  | 0.977418 | 0.980547 | 0.998607 |
+| SVM                 | 0.8549  | 0.603607  | 0.837997 | 0.701747 | 0.915443 |
+| XGBoost             | 0.8731  | 0.672662  | 0.734413 | 0.702183 | 0.913340 |
+
+**Best Model:** Logistic Regression | Input: scaled
+
 These metrics help measure how well the model identifies churn customers.
 
 ---
