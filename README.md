@@ -156,4 +156,4 @@ Possible improvements include:
 ## Author
 
 Vaishnavi Vangapally  
-Aspiring Data Scientist interested in Machine Learning, Data Analysis, and AI-based solutions.# Major-Project
+Aspiring Data Scientist interested in Machine Learning, Data Analysis, and AI-based solutions.
